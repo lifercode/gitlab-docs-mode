@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { CHROME_WEB_STORE_LISTING_URL, SITE } from "@/config/site"
+import { SITE } from "@/config/site"
 import { Chrome, Package } from "lucide-react"
 
 export function Hero() {
