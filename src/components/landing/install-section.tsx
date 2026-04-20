@@ -5,8 +5,8 @@ import { Badge } from "@/components/ui/badge"
 import {
   Tabs,
   TabsContent,
-  TabsList,
-  TabsTrigger,
+  // TabsList,
+  // TabsTrigger,
 } from "@/components/ui/tabs"
 import {
   CHROME_EXTENSION_ZIP_URL,
@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button"
 import {
   Download,
   ExternalLink,
-  Package,
+  // Package,
   RefreshCw,
   ShieldAlert,
   Wrench,

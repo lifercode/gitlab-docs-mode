@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { CHROME_EXTENSION_ZIP_URL, SITE } from "@/config/site"
-import { Chrome, Download, Package } from "lucide-react"
+import { Download, Package } from "lucide-react"
 
 export function Hero() {
   return (
