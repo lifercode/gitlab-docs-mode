@@ -1,3 +1,7 @@
+/** Ficheiro em `public/` — servido em `/` pelo Vite. */
+export const CHROME_EXTENSION_ZIP_URL =
+  "/gitlab-docs-mode-chrome-extension.zip"
+
 /** URLs públicas — substituir o ID da Chrome Web Store após publicação. */
 export const CHROME_WEB_STORE_LISTING_URL =
   "https://chrome.google.com/webstore/detail/gitlab-docs-mode/REPLACE_WITH_EXTENSION_ID"

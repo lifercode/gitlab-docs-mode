@@ -8,7 +8,11 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-import { CHROME_WEB_STORE_LISTING_URL } from "@/config/site"
+import {
+  CHROME_EXTENSION_ZIP_URL,
+  CHROME_WEB_STORE_LISTING_URL,
+} from "@/config/site"
+import { Button } from "@/components/ui/button"
 import {
   Download,
   ExternalLink,
@@ -54,7 +58,7 @@ export function InstallSection() {
           </p>
         </div>
         <Tabs defaultValue="zip" className="w-full gap-6">
-          <TabsList className="grid h-auto w-full max-w-md grid-cols-2 gap-1 p-1">
+          {/* <TabsList className="grid h-auto w-full max-w-md grid-cols-2 gap-1 p-1">
             <TabsTrigger value="store" className="gap-2" disabled>
               <ExternalLink className="size-4" aria-hidden />
               Chrome Web Store
@@ -63,7 +67,7 @@ export function InstallSection() {
               <Package className="size-4" aria-hidden />
               ZIP + programador
             </TabsTrigger>
-          </TabsList>
+          </TabsList> */}
           <TabsContent value="store" className="space-y-6 rounded-xl border border-border/80 bg-card/50 p-6 sm:p-8">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="outline">Utilizador final</Badge>
@@ -150,7 +154,18 @@ export function InstallSection() {
               </h3>
               <ol className="space-y-4">
                 <Step n={1}>
-                  Descarregar o ZIP da extensão (link do projeto ou releases).
+                  <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-2">
+                    Descarregar o ZIP da extensão:
+                    <Button variant="secondary" size="sm" className="h-8" asChild>
+                      <a
+                        href={CHROME_EXTENSION_ZIP_URL}
+                        download="gitlab-docs-mode-chrome-extension.zip"
+                      >
+                        <Download className="size-3.5" aria-hidden />
+                        gitlab-docs-mode-chrome-extension.zip
+                      </a>
+                    </Button>
+                  </span>
                 </Step>
                 <Step n={2}>
                   Extrair o ZIP para uma pasta permanente (ex.:{" "}

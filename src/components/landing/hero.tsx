@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { SITE } from "@/config/site"
-import { Chrome, Package } from "lucide-react"
+import { CHROME_EXTENSION_ZIP_URL, SITE } from "@/config/site"
+import { Chrome, Download, Package } from "lucide-react"
 
 export function Hero() {
   return (
@@ -35,7 +35,7 @@ export function Hero() {
           estáticos, sem substituir o GitLab por completo.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-          <Button
+          {/* <Button
             size="lg"
             className="bg-gradient-to-r from-indigo-500 to-violet-600 text-white shadow-lg shadow-indigo-950/40 hover:from-indigo-500/90 hover:to-violet-600/90"
             disabled
@@ -43,11 +43,20 @@ export function Hero() {
           >
             <Chrome className="size-5" aria-hidden />
             Em breve na Chrome Web Store
-          </Button>
+          </Button> */}
           <Button size="lg" variant="outline" asChild>
+            <a
+              href={CHROME_EXTENSION_ZIP_URL}
+              download="gitlab-docs-mode-chrome-extension.zip"
+            >
+              <Download className="size-5" aria-hidden />
+              Descarregar extensão (ZIP)
+            </a>
+          </Button>
+          <Button size="lg" variant="ghost" asChild>
             <a href="#instalar">
               <Package className="size-5" aria-hidden />
-              Instalação manual (ZIP)
+              Como instalar
             </a>
           </Button>
         </div>
